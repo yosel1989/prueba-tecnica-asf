@@ -1,0 +1,129 @@
+
+<div class="px-8 py-4 d-inline-flex w-100">
+
+  <div class="d-inline-flex me-2">
+    <div class="d-inline-flex me-2">
+      <label class="input-group-indigo input-group input-group-sm input-group focus" for="buscar" [class.no-focus]="!searchFocus">
+        <span class="input-group-text text-gray-400 pe-0 rounded-left-10px bg-white border-top-2px border-bottom-2px border-start-2px border-light-indigo"><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></span>
+        <input #buscar id="buscar" type="text" class="form-control border-start-0 border-left-0 border-top-2px border-bottom-2px border-light-indigo ps-0 pe-6" (focusin)="evtInput($event)" (focusout)="evtOutput($event)" (keyup)="evtApplyFilter($event)" placeholder="Buscar">
+      </label>
+    </div>
+  </div>
+
+  <button matRipple ngbTooltip="Actualizar lista"  class=" me-2 btn btn-sm btn-icon-secondary btn-light align-items-center d-inline-flex"
+          (click)="evtOnReload()"
+          [disabled]="loading">
+
+    Actualizar
+  </button>
+
+  <button matRipple ngbTooltip="Agregar"  class="me-2 btn btn-sm btn-success align-items-center d-inline-flex"
+          (click)="evtOnAdd()"
+          [disabled]="loading">
+
+    Agregar
+  </button>
+
+  <button matRipple ngbTooltip="Editar"  class="me-2 btn btn-sm btn-warning align-items-center d-inline-flex"
+          (click)="evtOnUpdate()"
+          [disabled]="!showEdit || loading">
+    Editar
+  </button>
+
+  <button matRipple ngbTooltip="Eliminar"  class="me-2 btn btn-sm btn-danger align-items-center d-inline-flex"
+          (click)="evtOnDelete()"
+          [disabled]="!showEdit || loading">
+    Eliminar
+  </button>
+
+</div>
+
+
+<mat-progress-bar *ngIf="loading" mode="indeterminate" class=""></mat-progress-bar>
+
+<div class="position-relative">
+  <div class="table-responsive" tabindex="0">
+
+    <table #tabla mat-table [dataSource]="dataSource" matSort class="table align-middle table-row-dashed fs-6 gy-5 dataTable">
+
+      <ng-container matColumnDef="select" >
+        <th mat-header-cell *matHeaderCellDef class="align-middle  w-62px">
+          <!--          <div class="form-check p-0">-->
+          <!--            <input class="form-check-input form-check-indigo" type="checkbox"-->
+          <!--                   (change)="$event ? toggleAllRows() : null"-->
+          <!--                   [checked]="selection.hasValue() && isAllSelected()"-->
+          <!--                   [indeterminate]="selection.hasValue() && !isAllSelected()"/>-->
+          <!--          </div>-->
+        </th>
+        <td mat-cell *matCellDef="let element" class="">
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexCheckDefault" (click)="$event.stopPropagation()"
+                   (change)="$event ? selection.toggle(element) : null"
+                   [checked]="selection.isSelected(element)" />
+            <label class="form-check-label" for="flexCheckDefault">
+            </label>
+          </div>
+
+          <div class="form-check p-0">
+            <input class="form-check-input form-check-indigo" type="checkbox"
+                   (click)="$event.stopPropagation()"
+                   (change)="$event ? selection.toggle(element) : null"
+                   [checked]="selection.isSelected(element)"/>
+          </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nombres" >
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="align-middle text-nowrap"> Nombres </th>
+        <td mat-cell *matCellDef="let element" class=" text-nowrap"> {{element.nombres}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="apellidos" >
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="align-middle text-nowrap"> Apellidos </th>
+        <td mat-cell *matCellDef="let element" class=" text-nowrap"> {{element.apellidos}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fechaNacimiento" >
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="align-middle text-nowrap"> F. Nac. </th>
+        <td mat-cell *matCellDef="let element" class=" text-nowrap"> {{element.fechaNacimiento | date}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fechaIngreso">
+        <th mat-header-cell *matHeaderCellDef class="align-middle"> F. Ing. </th>
+        <td mat-cell *matCellDef="let element" class="text-nowrap">{{element.fechaIngreso | date}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="sueldo">
+        <th mat-header-cell *matHeaderCellDef class="align-middle"> Sueldo </th>
+        <td mat-cell *matCellDef="let element" class="text-nowrap">{{element.sueldo | currency}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="afp">
+        <th mat-header-cell *matHeaderCellDef class="align-middle"> AFP </th>
+        <td mat-cell *matCellDef="let element" class="text-nowrap">{{element.afp}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="cargo">
+        <th mat-header-cell *matHeaderCellDef class="align-middle"> Cargo </th>
+        <td mat-cell *matCellDef="let element" class="text-nowrap">{{element.cargo}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef class="align-middle"> Estado </th>
+        <td mat-cell *matCellDef="let element" class="text-nowrap">{{element.status ? 'Activo' : 'Inactivo'}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="getDisplayedColumns" class="bg-light-indigo"></tr>
+      <tr mat-row *matRowDef="let row; let i = index; columns: getDisplayedColumns;" [class.bg-light-indigo]="this.selection.isSelected(row)" [@slideFromBottom]="{value: '* <=> *',params : { delay: (i+1) * 50 }}" ></tr>
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell small px-8" [attr.colspan]="displayedColumns.length">No se encontraron registros</td>
+      </tr>
+    </table>
+
+  </div>
+  <mat-paginator class="border-top rounded-bottom" [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="10"  [showFirstLastButtons]="true"></mat-paginator>
+</div>
+

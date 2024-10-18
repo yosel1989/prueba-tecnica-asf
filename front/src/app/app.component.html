@@ -1,0 +1,114 @@
+
+
+
+
+<div class="d-flex flex-column flex-root">
+  <div class="page d-flex flex-row flex-column-fluid">
+    <div id="kt_aside" class="aside" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+      <div class="aside-menu flex-column-fluid">
+        <div class="hover-scroll-overlay-y mx-3 my-5 my-lg-5" >
+          <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu">
+            <div class="menu-item here show menu-accordion">
+              <span class="menu-link">
+										<span class="menu-icon">
+											<i class="ki-duotone ki-element-11 fs-2">
+												<span class="path1"></span>
+												<span class="path2"></span>
+												<span class="path3"></span>
+												<span class="path4"></span>
+											</i>
+										</span>
+										<span class="menu-title">Empleados</span>
+										<span class="menu-arrow"></span>
+									</span>
+
+              <div class="menu-sub menu-sub-accordion">
+                <div class="menu-item">
+                  <a class="menu-link" routerLink="/empleado" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+                    <span class="menu-title">Listado</span>
+                  </a>
+                </div>
+
+                <div class="menu-item">
+                  <a class="menu-link" routerLink="/empleado/nuevo" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+                    <span class="menu-title">Nuevo Empleado</span>
+                  </a>
+                </div>
+
+
+              </div>
+
+            </div>
+
+
+          </div>
+          <!--end::Menu-->
+        </div>
+        <!--end::Aside Menu-->
+      </div>
+    </div>
+
+    <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+
+      <div id="kt_header" style="" class="header align-items-stretch bg-white shadow-sm">
+        <!--begin::Brand-->
+        <div class="header-brand">
+          <!--begin::Logo-->
+          <a routerLink="">
+            <h1 class="text-light">ASF</h1>
+          </a>
+
+          <!--begin::Aside toggle-->
+          <div class="d-flex align-items-center d-lg-none me-n2" title="Show aside menu">
+            <div class="btn btn-icon btn-active-color-primary w-30px h-30px" id="kt_aside_mobile_toggle">
+              <i class="ki-duotone ki-abstract-14 fs-1">
+                <span class="path1"></span>
+                <span class="path2"></span>
+              </i>
+            </div>
+          </div>
+          <!--end::Aside toggle-->
+        </div>
+        <!--end::Brand-->
+
+        <div class="toolbar d-flex align-items-stretch border-bottom">
+          <div class="container-xxl py-6 py-lg-0 d-flex flex-column flex-lg-row align-items-lg-stretch justify-content-lg-between">
+            <div class="page-title d-flex justify-content-center flex-column me-5">
+              <h1 class="d-flex flex-column text-gray-900 fw-bold fs-3 mb-0">ASF</h1>
+            </div>
+          </div>
+          <!--end::Toolbar container-->
+        </div>
+        <!--end::Toolbar-->
+      </div>
+
+      <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+        <div class="post d-flex flex-column-fluid" id="kt_post">
+          <div id="kt_content_container" class="container-xxl">
+
+            <router-outlet></router-outlet>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+        <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <div class="text-gray-900 order-2 order-md-1">
+            <span class="text-muted fw-semibold me-1">2024&copy;</span>
+            <span class="text-gray-800 text-hover-primary">ASF</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,11 @@
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\bin\Debug\net6.0\api-net-core6.Domain.deps.json
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\bin\Debug\net6.0\api-net-core6.Domain.dll
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\bin\Debug\net6.0\api-net-core6.Domain.pdb
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\obj\Debug\net6.0\api-net-core6.Domain.GeneratedMSBuildEditorConfig.editorconfig
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\obj\Debug\net6.0\api-net-core6.Domain.AssemblyInfoInputs.cache
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\obj\Debug\net6.0\api-net-core6.Domain.AssemblyInfo.cs
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\obj\Debug\net6.0\api-net-core6.Domain.csproj.CoreCompileInputs.cache
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\obj\Debug\net6.0\api-net-core6.Domain.dll
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\obj\Debug\net6.0\refint\api-net-core6.Domain.dll
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\obj\Debug\net6.0\api-net-core6.Domain.pdb
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Domain\obj\Debug\net6.0\ref\api-net-core6.Domain.dll

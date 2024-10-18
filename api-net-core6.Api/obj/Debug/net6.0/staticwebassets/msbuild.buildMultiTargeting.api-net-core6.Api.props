@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\api-net-core6.Api.props" />
+</Project>

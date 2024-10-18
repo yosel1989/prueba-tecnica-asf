@@ -1,0 +1,17 @@
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\api-net-core6.Infrastructure.csproj.AssemblyReference.cache
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\api-net-core6.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\api-net-core6.Infrastructure.AssemblyInfoInputs.cache
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\api-net-core6.Infrastructure.AssemblyInfo.cs
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\api-net-core6.Infrastructure.csproj.CoreCompileInputs.cache
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\bin\Debug\net6.0\api-net-core6.Infrastructure.deps.json
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\bin\Debug\net6.0\api-net-core6.Infrastructure.runtimeconfig.json
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\bin\Debug\net6.0\api-net-core6.Infrastructure.dll
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\bin\Debug\net6.0\api-net-core6.Infrastructure.pdb
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\bin\Debug\net6.0\api-net-core6.Domain.dll
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\bin\Debug\net6.0\api-net-core6.Domain.pdb
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\api-net-.04373F9D.Up2Date
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\api-net-core6.Infrastructure.dll
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\refint\api-net-core6.Infrastructure.dll
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\api-net-core6.Infrastructure.pdb
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\api-net-core6.Infrastructure.genruntimeconfig.cache
+Y:\Pruebas tecnicas\prueba-tecnica-asf\api-net-core6.Infrastructure\obj\Debug\net6.0\ref\api-net-core6.Infrastructure.dll

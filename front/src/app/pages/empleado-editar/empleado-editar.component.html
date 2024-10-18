@@ -1,0 +1,98 @@
+<form [formGroup]="formGroup" (ngSubmit)="evtOnSubmit()">
+
+  <div class="card card-flush py-4">
+    <!--begin::Card header-->
+    <div class="card-header">
+      <div class="card-title">
+        <h2>Editar Empleado</h2>
+      </div>
+    </div>
+    <!--end::Card header-->
+    <!--begin::Card body-->
+    <div class="card-body pt-0">
+      <!--begin::Input group-->
+      <div class="mb-10 fv-row fv-plugins-icon-container">
+        <label class="required form-label">Nombres</label>
+        <input type="text" class="form-control mb-2" placeholder="Ingresar nombres" formControlName="nombres">
+        <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+      </div>
+
+      <div class="mb-10 fv-row fv-plugins-icon-container">
+        <label class="required form-label">Apellidos</label>
+        <input type="text" class="form-control mb-2" placeholder="Ingresar apellidos" formControlName="apellidos">
+        <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+      </div>
+
+      <div class="mb-10 fv-row fv-plugins-icon-container">
+        <label class="required form-label">Fecha Nacimiento</label>
+        <input type="date" class="form-control mb-2" placeholder="Seleccionar fecha" formControlName="fechaNacimiento">
+        <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+      </div>
+
+      <div class="mb-10 fv-row fv-plugins-icon-container">
+        <label class="required form-label">Fecha Ingreso</label>
+        <input type="date" class="form-control mb-2" placeholder="Seleccionar fecha" formControlName="fechaIngreso">
+        <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+      </div>
+
+      <div class="mb-10 fv-row fv-plugins-icon-container">
+        <label class="required form-label">AFP</label>
+        <select class="form-control mb-2" formControlName="idAFP">
+          <option value="">Seleccionar</option>
+          <option [value]="1">AFP Integra</option>
+          <option [value]="2">AFP Prima</option>
+          <option [value]="3">AFP Habitat</option>
+          <option [value]="4">AFP Profuturo</option>
+          <option [value]="5">AFP Capital</option>
+        </select>
+        <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+      </div>
+
+      <div class="mb-10 fv-row fv-plugins-icon-container">
+        <label class="required form-label">Cargo</label>
+        <select class="form-control mb-2" formControlName="idCargo">
+          <option value="">Seleccionar</option>
+          <option [value]="1">Desarrollador</option>
+          <option [value]="2">Analista de Sistemas</option>
+          <option [value]="3">Gerente de Proyectos</option>
+          <option [value]="4">Diseñador UX/UI</option>
+          <option [value]="5">Tester de Calidad</option>
+        </select>
+        <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+      </div>
+
+      <div class="mb-10 fv-row fv-plugins-icon-container">
+        <label class="required form-label">Sueldo</label>
+        <input type="number" class="form-control mb-2"  formControlName="sueldo" min="0">
+        <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+      </div>
+
+      <div class="mb-10 fv-row fv-plugins-icon-container">
+        <label class="required form-label">Estado</label>
+        <select class="form-control mb-2" formControlName="status">
+          <option [value]="1">Activo</option>
+          <option [value]="0">Inactivo</option>
+        </select>
+        <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+      </div>
+
+
+    </div>
+    <!--end::Card header-->
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <!--begin::Button-->
+    <button type="reset" class="btn btn-light me-5">Cancel</button>
+    <!--end::Button-->
+    <!--begin::Button-->
+    <button [disabled]="!empleado" type="submit" id="kt_ecommerce_add_product_submit" class="btn btn-primary">
+      <span class="indicator-label">Guardar</span>
+      <span class="indicator-progress">Please wait...
+												<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+    </button>
+    <!--end::Button-->
+  </div>
+
+
+</form>
